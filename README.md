@@ -1,4 +1,17 @@
 # AI Text Summarizer — Technical Interview
+Completed technical interview submission by **Amine Lotfi** for the
+**AI Development Bootcamp Instructor** position at GOMYCODE.
+
+The application uses FastAPI, vanilla JavaScript, and Ollama (`llama3.2:3b`)
+to summarize user-provided text in one or two sentences. The completed sections
+cover model initialization, prompt construction, model invocation, the JSON API
+response, and frontend request/response handling.
+
+Original starter project: [jemai7579/technical-exercice2](https://github.com/jemai7579/technical-exercice2).
+The original exercise instructions are retained below for reference.
+
+---
+
 **Goal:** Finish a simple web app that summarizes a paragraph using Ollama.
 
 Most of the project is already provided. Complete **only TODO 0–5** in `app.py` and `frontend/app.js`.

@@ -18,12 +18,22 @@ async function summarizeText() {
     try {
         // TODO 4:
         // Send the user's text to the backend API.
-        const response = null;
+        const response = await fetch("/api/summarize", {
+           method: "post",
+           headers: {
+              "content-type": "application/json"
+           },
+           body: JSON.stringify({text})
+
+        });
 
         // TODO 5:
         // Process the API response and display the generated summary.
-        const data = null;
-        summaryOutput.textContent = "TODO 5: Display the summary";
+        const data = await response.json();
+        if (!response.ok){
+            throw new Error(data.detail || "Request failed");
+        }
+        summaryOutput.textContent = data.summary;
         statusBox.textContent = "";
     } catch (error) {
         console.error(error);
